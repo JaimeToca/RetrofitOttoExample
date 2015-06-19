@@ -4,6 +4,7 @@ This is just an example of how you can use Retrofit and Otto libraries from squa
 **MovieDB API**
 This is how the request looks like for getting the 20 most popular actors : 
 
+
     http://api.themoviedb.org/3/person/popular?api_key=XXXXX
 
  You can check out the JSON response [here](http://docs.themoviedb.apiary.io/#reference/people/personpopular/get)
