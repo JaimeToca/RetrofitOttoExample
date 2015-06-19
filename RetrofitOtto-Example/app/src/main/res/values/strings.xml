@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pruebas</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="downloading">Downloading actors...</string>
+    <string name="download">Download</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="clicktodownload">Click to download actors...</string>
+    <string name="done">Done</string>
+    <string name="retrofitExample">RetrofitExample</string>
+</resources>
