@@ -94,7 +94,7 @@ MainActivity.Class
         showActors(actorsWrapper);
     }
 
-Then, once the information is ready we notify the mainactivity through the bus using post
+Then, if the information is ready the main activity is notified through the bus using post
 
 RestActorSource.class
 
