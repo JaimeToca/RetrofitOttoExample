@@ -1,5 +1,3 @@
-package toca.jaime.com.RetrofitExample.rest;
-
 /*
  * Copyright (C) 2015 Jaime Toca.
  *
@@ -15,6 +13,7 @@ package toca.jaime.com.RetrofitExample.rest;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package toca.jaime.com.RetrofitExample.rest;
 import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Query;

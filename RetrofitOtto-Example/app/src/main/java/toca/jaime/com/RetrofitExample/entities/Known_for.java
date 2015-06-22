@@ -1,5 +1,3 @@
-package toca.jaime.com.RetrofitExample.entities;
-
 /*
  * Copyright (C) 2015 Jaime Toca.
  *
@@ -15,6 +13,8 @@ package toca.jaime.com.RetrofitExample.entities;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package toca.jaime.com.RetrofitExample.entities;
+
 
 @SuppressWarnings("UnusedDeclaration")
 public class Known_for {

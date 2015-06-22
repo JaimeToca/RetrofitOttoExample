@@ -1,10 +1,3 @@
-package toca.jaime.com.RetrofitExample.entities;
-
-import java.io.Serializable;
-import java.util.List;
-
-import toca.jaime.com.RetrofitExample.entities.Actor;
-
 /*
  * Copyright (C) 2015 Jaime Toca.
  *
@@ -20,6 +13,10 @@ import toca.jaime.com.RetrofitExample.entities.Actor;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package toca.jaime.com.RetrofitExample.entities;
+import java.io.Serializable;
+import java.util.List;
+import toca.jaime.com.RetrofitExample.entities.Actor;
 
 public class ActorsWrapper implements Serializable {
 

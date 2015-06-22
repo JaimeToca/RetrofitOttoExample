@@ -1,7 +1,3 @@
-package toca.jaime.com.RetrofitExample.rest;
-
-import toca.jaime.com.RetrofitExample.entities.ActorsWrapper;
-
 /*
  * Copyright (C) 2015 Jaime Toca.
  *
@@ -17,6 +13,9 @@ import toca.jaime.com.RetrofitExample.entities.ActorsWrapper;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package toca.jaime.com.RetrofitExample.rest;
+import toca.jaime.com.RetrofitExample.entities.ActorsWrapper;
+
 public interface MediaSource {
 
     //Get actors

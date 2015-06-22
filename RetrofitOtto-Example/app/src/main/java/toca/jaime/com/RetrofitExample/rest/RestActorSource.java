@@ -1,18 +1,3 @@
-package toca.jaime.com.RetrofitExample.rest;
-
-import android.util.Log;
-
-import com.squareup.otto.Bus;
-import com.squareup.otto.ThreadEnforcer;
-
-import retrofit.RestAdapter;
-import retrofit.Callback;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
-import toca.jaime.com.RetrofitExample.MainActivity;
-import toca.jaime.com.RetrofitExample.entities.ActorsWrapper;
-import toca.jaime.com.RetrofitExample.rest.ActorDatabaseAPI;
-
 /*
  * Copyright (C) 2015 Jaime Toca.
  *
@@ -28,6 +13,18 @@ import toca.jaime.com.RetrofitExample.rest.ActorDatabaseAPI;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package toca.jaime.com.RetrofitExample.rest;
+import android.util.Log;
+import com.squareup.otto.Bus;
+import com.squareup.otto.ThreadEnforcer;
+import retrofit.RestAdapter;
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
+import toca.jaime.com.RetrofitExample.MainActivity;
+import toca.jaime.com.RetrofitExample.entities.ActorsWrapper;
+import toca.jaime.com.RetrofitExample.rest.ActorDatabaseAPI;
+
 
 public class RestActorSource implements MediaSource {
 

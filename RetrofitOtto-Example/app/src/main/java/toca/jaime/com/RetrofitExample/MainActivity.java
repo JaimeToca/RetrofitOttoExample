@@ -1,19 +1,3 @@
-package toca.jaime.com.RetrofitExample;
-import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
-import com.squareup.otto.Bus;
-import com.squareup.otto.Subscribe;
-import com.squareup.otto.ThreadEnforcer;
-
-import toca.jaime.com.RetrofitExample.entities.ActorsWrapper;
-import toca.jaime.com.RetrofitExample.rest.RestActorSource;
-
 /*
  * Copyright (C) 2015 Jaime Toca.
  *
@@ -29,6 +13,20 @@ import toca.jaime.com.RetrofitExample.rest.RestActorSource;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package toca.jaime.com.RetrofitExample;
+import android.app.Activity;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import com.squareup.otto.Bus;
+import com.squareup.otto.Subscribe;
+import com.squareup.otto.ThreadEnforcer;
+import toca.jaime.com.RetrofitExample.entities.ActorsWrapper;
+import toca.jaime.com.RetrofitExample.rest.RestActorSource;
+
 
 public class MainActivity extends Activity implements View.OnClickListener {
 

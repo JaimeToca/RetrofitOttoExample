@@ -1,7 +1,3 @@
-package toca.jaime.com.RetrofitExample.entities;
-
-import java.util.List;
-
 /*
  * Copyright (C) 2015 Jaime Toca.
  *
@@ -17,6 +13,9 @@ import java.util.List;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package toca.jaime.com.RetrofitExample.entities;
+import java.util.List;
+
 
 @SuppressWarnings("UnusedDeclaration")
 public class Actor {
