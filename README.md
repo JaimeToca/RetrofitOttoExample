@@ -69,6 +69,7 @@ This JSON response dictates how entities should be define. In this case, 3 entit
 Otto is a great way to communicate between your activities/fragments/services. In this project, there are 2 modules (Rest and Entities) and once the information is downloaded the rest module needs to comunicate with the main activity (the one that will show the information ).<br/>
 First of all, a singleton instance of the Bus class will be created in order to provide access to it for the android components :
 
+MainActivity.class
 	   	
        private Bus bus;
 	   @Override
@@ -80,6 +81,8 @@ First of all, a singleton instance of the Bus class will be created in order to 
 
 MainActivity Class will wait for events, the registration is done via register and  @Subcribe annotation on a public single parameter method.
 
+MainActivity.Class
+
     @Subscribe
     public void ActorsReceived(ActorsWrapper actorsWrapper) {
         downloadButton.setText(R.string.done);
@@ -88,6 +91,8 @@ MainActivity Class will wait for events, the registration is done via register a
     }
 
 Then, once the information is ready we notify the mainactivity through the bus using post
+
+RestActorSource.class
 
     @Override
     public void sendActorsToActivity (ActorsWrapper actorsResponse) {
