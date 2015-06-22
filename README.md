@@ -120,8 +120,26 @@ RestActorSource.class
         }
     };
 
- 
+**Retrofit** <br/>
+ Following the instructions read on retrofit website, the interface that cotains the url http call is defined:
 
+    public interface ActorDatabaseAPI {
+
+    @GET("/person/popular")
+    void getPopularActors(
+            @Query("api_key") String apiKey,
+            Callback<ActorsWrapper> callback);
+	}
+
+and then finally we create the rest adapter that will let us make the calls.
+
+    RestAdapter movieAPIRest = new RestAdapter.Builder()
+       .setEndpoint(HOST)
+       .setLogLevel(RestAdapter.LogLevel.HEADERS_AND_ARGS)
+       .build();
+      
+  
+  I recommend you to check out the REST module in which everything is pretty clear.
 
 **Project structure** <br />
 *APP*<br />
@@ -152,6 +170,10 @@ distributed under the License is distributed on an "AS IS" BASIS,<br/>
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br/>
 See the License for the specific language governing permissions and<br/>
 limitations under the License.<br/>
+
+
+
+
 
 
 
