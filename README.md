@@ -8,7 +8,11 @@ This is how the request looks like for getting the 20 most popular actors :
 
 check out the JSON response [here](http://docs.themoviedb.apiary.io/#reference/people/personpopular/get)
 
-    {
+
+
+    "page": 1,
+    "results": [
+     {
       "adult": false,
       "id": 85,
       "known_for": [
