@@ -121,7 +121,7 @@ RestActorSource.class
     };
 
 **Retrofit** <br/>
- Following the instructions read on retrofit website, the interface that cotains the url http call is defined:
+ firstly the interface that cotains the url http call is defined:
 
     public interface ActorDatabaseAPI {
 
