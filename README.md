@@ -70,8 +70,7 @@ This JSON response dictates how entities should be define. In this case, 3 entit
 
 
 **When to use Otto?** <br/>
-Otto is a great way to communicate between your activities/fragments/services. Basically, events are sent through a bus system and the classes interested to those events have to suscribe to that bus. I recommend you to use and play with Otto, but keep in mind that sometimes is not the best option, specially when it comes to nesting events, you can really get in troubles and become mad with the debugging. <br/>
-In this project, there are 2 modules (Rest and Entities) and once the information is downloaded the rest module needs to comunicate with the main activity (the one that will show the information ).<br/>
+Otto is a great way to communicate between your activities/fragments/services. Basically, events are sent through a bus system and the classes interested to those events have to suscribe to that bus. I recommend you to use and play with Otto, but keep in mind that sometimes is not the best option, specially when it comes to nesting events, you can really get in troubles and become mad with the debugging.In this project, there are 2 modules (Rest and Entities) and once the information is downloaded the rest module needs to comunicate with the main activity (the one that will show the information ).<br/>
 First of all, a singleton instance of the Bus class will be created in order to provide access to it for the android components :
 
 MainActivity.class
