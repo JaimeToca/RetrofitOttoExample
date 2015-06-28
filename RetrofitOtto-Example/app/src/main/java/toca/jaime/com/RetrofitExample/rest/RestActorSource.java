@@ -66,8 +66,7 @@ public class RestActorSource implements MediaSource {
         public void success(Object o, Response response) {
 
             if (o instanceof ActorsWrapper){
-                actorsCallbackResponse = (ActorsWrapper) o;
-                sendActorsToActivity(actorsCallbackResponse);
+                sendActorsToActivity((ActorsWrapper) o);
             }
         }
 
