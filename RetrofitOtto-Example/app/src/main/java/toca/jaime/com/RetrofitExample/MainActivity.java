@@ -49,12 +49,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     }
 
-    @Override
-    public void onStop() {
-        super.onStop();
-        bus.unregister(this);
-    }
-
     @Subscribe
     public void ActorsReceived(ActorsWrapper actorsWrapper) {
         downloadButton.setText(R.string.done);
@@ -79,7 +73,5 @@ public class MainActivity extends Activity implements View.OnClickListener {
             downloadInformation.getPopularActors();
         }
     }
-
-
 
 }
