@@ -8,69 +8,8 @@ This is how the request looks like for getting the 20 most popular actors :
 
 check out the JSON response [here](http://docs.themoviedb.apiary.io/#reference/people/personpopular/get)
 
-
-
-    "page": 1,
-    "results": [
-     {
-      "adult": false,
-      "id": 85,
-      "known_for": [
-        {
-          "adult": false,
-          "backdrop_path": "/jpRpigNQUjNlfx0gYRBJ30tQIOl.jpg",
-          "id": 22,
-          "original_title": "Pirates of the Caribbean: The Curse of the Black Pearl",
-          "release_date": "2003-07-09",
-          "poster_path": "/mL3mGWeiANcAeyJQDwEdwpxQKYv.jpg",
-          "popularity": 3.97737662538628,
-          "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
-          "vote_average": 6.9,
-          "vote_count": 2191,
-          "media_type": "movie"
-        }
-      ],
-      "name": "Johnny Depp",
-      "popularity": 51.9316242947408,
-      "profile_path": "/5sc2pu4YWItxCaXSvrFpg64zN9J.jpg"
-       .
-       .
-       .   
- 
-This JSON response dictates how entities should be define. In this case, 3 entities is more than enough; Actor, Known_For and Actor_Wrapper. <br/>
-**Actor**
-
-    private String adult;
-    private Number id;
-    private List<Known_for> known_for;
-    private String name;
-    private Number popularity;
-    private String profile_path;
-
-**Known_For**
-
-    private String adult;
-    private String backdrop_path;
-    private Number id;
-    private String original_title;
-    private String release_date;
-    private String poster_path;
-    private Number popularity;
-    private String title;
-    private Number vote_average;
-    private Number vote_count;
-    private String media_type;
-
-**ActorsWrapper**
-
-    private Number page;
-    private List<Actor> results;
-    private Number total_pages;
-    private Number total_results;
-
-
 **When to use Otto?** <br/>
-Otto is a great way to communicate between different components in your project. Events are sent through a bus and the classes interested to some specific events have to suscribe to them. I recommend you play with Otto, but keep in mind that sometimes is not the best option, specially when it comes to nesting events, you can really get in trouble and become mad with the debugging. In my opinion, Otto is good, but in the end I would recommend to use simple listeners / Threads or even better RxJava (this repository was created before I started programming with RxJava) , although they might require more code, will make things eassier to understand .In this project, there are 2 modules and once the information is downloaded the rest module needs to comunicate with the main activity (the one that will show the information ).<br/>
+Otto is a great way to communicate between different components in your project. Events are sent through a bus and the classes interested to some specific events have to suscribe to them. I recommend you play with Otto, but keep in mind that sometimes is not the best option, specially when it comes to nesting events, you can really get in trouble and become mad with the debugging. In my opinion, Otto is good, but in the end I would recommend to use simple listeners / Threads or even better RxJava (this repository was created before I started programming with RxJava) , although some of them might require more code, will make things eassier to understand .In this project, there are 2 modules and once the information is downloaded the rest module needs to comunicate with the main activity (the one that will show the information ).<br/>
 First of all, a singleton instance of the Bus class will be created in order to provide access to it for the android components :
 
 MainActivity.class
@@ -119,26 +58,6 @@ RestActorSource.class
         }
     };
 
-**Retrofit** <br/>
- firstly the interface that cotains the url http call is defined:
-
-    public interface ActorDatabaseAPI {
-
-    @GET("/person/popular")
-    void getPopularActors(
-            @Query("api_key") String apiKey,
-            Callback<ActorsWrapper> callback);
-	}
-
-and then finally we create the rest adapter that will let us make the calls.
-
-    RestAdapter movieAPIRest = new RestAdapter.Builder()
-       .setEndpoint(HOST)
-       .setLogLevel(RestAdapter.LogLevel.HEADERS_AND_ARGS)
-       .build();
-      
-  
-  I recommend you to check out the REST module in which everything is pretty clear.
 
 **Project structure** <br />
 *APP*<br />
