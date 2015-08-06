@@ -46,8 +46,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bus = new Bus (ThreadEnforcer.ANY);
         bus.register(this);
         downloadInformation = new RestActorSource(bus);
-
     }
+
 
     @Subscribe
     public void ActorsReceived(ActorsWrapper actorsWrapper) {
