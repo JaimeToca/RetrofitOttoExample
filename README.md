@@ -1,5 +1,5 @@
 # Retrofit-Otto-Example
-(Note: Otto is deprecated due to RxJava)
+(Note: Otto is deprecated due to RxJava)<br />
 This is just a basic example of how you can use Retrofit and Otto libraries  in your android projects. I decided to work with [themovieDB](https://www.themoviedb.org/), an opensource database for TV Shows, Movies and Actors. The purpose of this project is to show the last 20 most famous actors using retrofit wich works with Rest-Json among others, also Otto is used to notify the main activity that the information is ready and send the actors aswell.
 
 **MovieDB API** <br />
